@@ -39,28 +39,8 @@ class House
    holder
  end
 
- def rooms_by_category
-   @rooms.to_h
+ def price_per_square_foot
+   @price.to_i / area
  end
-
+ 
 end
-
-
-house = House.new("$400000", "123 sugar lane")
-# p house.price
-# p house.address
-# p house.rooms
-room_1 = Room.new(:bedroom, 10, 13)
-room_2 = Room.new(:bedroom, 11, 15)
-room_3 = Room.new(:living_room, 25, 15)
-room_4 = Room.new(:basement, 30, 41)
-
-house.add_room(room_1)
-house.add_room(room_2)
-house.add_room(room_3)
-house.add_room(room_4)
-house.rooms
-
-p house.area.class
-p house.rooms_by_sorted_area
-# p house.rooms_by_category
